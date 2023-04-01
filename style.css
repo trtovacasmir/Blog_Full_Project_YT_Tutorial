@@ -99,4 +99,68 @@ nav{
     position: fixed;
     top: 0;
     z-index: 10;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+nav button{
+    display: none;
+}
+.nav__container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.avatar{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.3rem solid var(--color-bg);
+}
+
+.nav__logo{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.nav__items{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.nav__profile{
+    position: relative;
+    cursor: pointer;
+}
+
+.nav__profile ul{
+    position: absolute;
+    top: 125%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
+    background: var(--color-gray-900);
+    visibility: hidden;
+    opacity: 0;  
+    transition: var(--transition);
+}
+
+.nav__profile:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav__profile ul li a{
+    padding: 1rem;
+    background: var(--color-gray-900); 
+    display: block;
+    width: 100%;
+}
+
+.nav__profile ul li:last-child a {
+    background: red;
+    color: var(--color-bg);
 }
