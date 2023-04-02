@@ -427,4 +427,13 @@ footer ul a:hover {
         border: 0;
     }
 
+    .featured__container {
+        gap: 3rem;
+    }
+
+    .posts__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
 }
