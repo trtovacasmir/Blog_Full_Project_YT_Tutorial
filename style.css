@@ -436,4 +436,43 @@ footer ul a:hover {
         gap: 3rem;
     }
 
+    .footer__container {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+/*================================ MEDIA QUERIES (PHONE DEVICES) =========================================*/
+
+@media screen and (max-width:600px) {
+   section {
+    margin-top: 2rem;
+   }
+   h1 {
+    font-size: 2rem;
+   }
+   .featured {
+    margin-top: 6rem;
+   }
+
+   .featured__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+   }
+
+   .posts__container {
+    grid-template-columns: 1fr;
+   }
+
+   .category__buttons-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+   }
+
+   .footer__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+   }
 }
