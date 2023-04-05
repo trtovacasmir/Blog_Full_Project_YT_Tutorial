@@ -362,8 +362,27 @@ footer ul a:hover {
     color: var(--color-white);
 }
 
+/*================================ SINGLE POST IN POST.HTML =========================================*/
+
+.singlepost {
+    margin: 6rem 0 2rem;
+}
+
+.singlepost__container {
+    width: var(--form-width);
+    background: var(--color-gray-900);
+    padding: 1rem 2rem 3rem;
+}
+
+.singlepost__thumbnail {
+  margin: 1.5rem 0 1rem;
+}
 
 
+.singlepost__container p {
+    margin-top: 1rem;
+    line-height: 1.7;
+}
 
 
 
@@ -500,12 +519,13 @@ footer ul a:hover {
     }
 
 
-    /*================================ BLOG.HTML =========================================*/
+   /*================================ BLOG.HTML =========================================*/
 
 
     .search__bar-container {
         width: 60%;
     }
+
 
 
 }
@@ -548,6 +568,14 @@ footer ul a:hover {
    .search__bar-container {
     width:var(--container-width-md);
     }
+
+
+    /*================================ SINGLE POST IN POST.HTML =========================================*/
+   
+   .singlepost__container {
+    background-color: transparent;
+    padding: 0;
+   }
 
 
 }
