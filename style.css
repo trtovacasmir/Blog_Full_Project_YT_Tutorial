@@ -417,8 +417,10 @@ footer ul a:hover {
 .form__section {
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: 120vh;
 }
+
+
 
 .form__section-container {
     width: var(--form-width);
@@ -449,7 +451,12 @@ form{
 .form__control {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.6rem;
+}
+
+.form__control.inline{
+    flex-direction: row;
+    align-items: center;
 }
 
 input, textarea, select {
@@ -468,6 +475,7 @@ input, textarea, select {
 .form__section small a {
     color: var(--color-primary);
 }
+
 
 /*================================ MEDIA QUERIES (TABLETS) =========================================*/
 
