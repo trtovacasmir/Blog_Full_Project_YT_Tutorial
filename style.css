@@ -417,7 +417,7 @@ footer ul a:hover {
 .form__section {
     display: grid;
     place-items: center;
-    height: 120vh;
+    height: 100vh;
 }
 
 
