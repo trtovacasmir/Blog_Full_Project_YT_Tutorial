@@ -363,6 +363,21 @@ footer ul a:hover {
     color: var(--color-white);
 }
 
+
+.btn.sm{
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+.btn.danger {
+    background: var(--color-red);
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+}
+
 /*================================ SINGLE POST IN POST.HTML =========================================*/
 
 .singlepost {
@@ -474,6 +489,76 @@ input, textarea, select {
 
 .form__section small a {
     color: var(--color-primary);
+}
+
+
+/*================================ DASHBOARD =========================================*/
+
+.dashboard {
+    margin-top: 6rem;
+}
+
+.dashboard__container {
+    display: grid;
+    grid-template-columns: 14rem auto;
+    gap: 1rem;
+    background: var(--color-gray-900);
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+.dashboard aside a {
+
+    background-color: var(--color-primary);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+.dashboard aside ul li:not(:last-child) a {
+   border-bottom: 1px solid var(--color-gray-900);
+}
+
+.dashboard aside a:hover {
+    background: var(--color-gray-700);
+}
+
+.dashboard aside a.active {
+    background-color: var(--color-gray-900);
+}
+
+.dashboard main {
+    margin-left: 1.5rem;
+}
+
+.dashboard main h2 {
+    margin: 0 0 2rem 0;
+    line-height: 1;
+}
+
+.dashboard main table {
+    width: 100%;
+    text-align: left;
+}
+
+.dashboard main table th {
+    background: var(--color-gray-700);
+    padding: 0.8rem;
+    color: var(--color-white);
+}
+
+.dashboard main table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.dashboard main table tr:hover td {
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    cursor: default;
+    transition: var(--transition);
+
 }
 
 
@@ -626,6 +711,36 @@ input, textarea, select {
         padding: 3rem;
     }
 
+
+    /*================================ DASHBOARD =========================================*/
+
+     .dashboard__container {
+        grid-template-columns: 4.5rem auto;
+        padding: 0;
+        background: transparent;
+     }
+
+     .dashboard aside h5 {
+        display: none;
+     }
+
+     .dashboard main table thead {
+        display: none;
+     }
+
+     .dashboard main table tr {
+        display: flex;
+        flex-direction: column;
+     }
+
+     .dashboard main table tr:nth-child(even) {
+        background: var(--color-gray-900);
+     }
+
+     .dashboard main table tr:hover td {
+        background: transparent;
+
+     }
 
 
 }
