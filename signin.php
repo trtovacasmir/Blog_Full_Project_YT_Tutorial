@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Multipage Blog Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <!---GOOGLE FONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -23,13 +23,13 @@
             <input type="text" placeholder="Username or Email">
             <input type="password" placeholder="Password">
             <button type="submit" class="btn">Sign In</button>
-            <small>Don't have account? <a href="signup.html">Sign Up</a></small>
+            <small>Don't have account? <a href="signup.php">Sign Up</a></small>
         </form>
 
     </div>
 </section>
 
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
