@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
 
     if (!mysqli_errno($connection)) {
         // redirect to login page with success message
-        $_SESSION['add-user-success'] = "New user $firsname $lastname added successfuly.";
+        $_SESSION['add-user-success'] = "New user $firstname $lastname added successfuly.";
         header('location: ' . ROOT_URL . 'admin/manage-users.php');
         die();
 
