@@ -1,6 +1,10 @@
 <?php
 include 'partials/header.php';
 
+
+// fetch categories from database
+$query = "SELECT * FROM categories ORDER BY title";
+$categories = mysqli_query($connection, $query);
 ?>
 
 
@@ -60,6 +64,7 @@ include 'partials/header.php';
         <main>
 
             <h2>Manage Categories</h2>
+            <?php if(mysqli_num_rows($categories) > 0) : ?>
             <table>
                 <thead>
                     <tr>
@@ -70,23 +75,19 @@ include 'partials/header.php';
                 </thead>
 
                 <tbody>
+                <?php while ($category = mysqli_fetch_assoc($categories)) : ?>
                     <tr>
-                        <td>Travel</td>
-                        <td><a href="edit-category.php" class="btn sm">Edit</a></td>
-                        <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
+                        <td><?= $category['title'] ?></td>
+                        <td><a href="<?=ROOT_URL ?>admin/edit-category.php?id=<?= $category['id'] ?>" class="btn sm">Edit</a></td>
+                        <td><a href="<?=ROOT_URL ?>admin/delete-category.php?id=<?= $category['id'] ?>" class="btn sm danger">Delete</a></td>
                     </tr>
-                    <tr>
-                        <td>Wild Life</td>
-                        <td><a href="edit-category.php" class="btn sm">Edit</a></td>
-                        <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>Music</td>
-                        <td><a href="edit-category.php" class="btn sm">Edit</a></td>
-                        <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                    </tr>
+                    <?php endwhile ?>
+                   
                 </tbody>
             </table>
+            <?php else : ?>
+                <div class="alert__message error"><?= "No categories found" ?></div>
+                <?php endif ?>
 
         </main>
     </div>
