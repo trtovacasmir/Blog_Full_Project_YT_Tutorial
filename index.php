@@ -83,7 +83,7 @@ $posts = mysqli_query($connection, $query);
                 ?>
 
                     <a href="<?= ROOT_URL ?>category-posts.php?id=<?= $post['category_id'] ?>" class="category__button"><?= $category['title'] ?></a>
-                    <h3 class="post__title"><a href="post.html"><?= $post['title'] ?></a>
+                    <h3 class="post__title"><a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a>
                     </h3>
                     <p class="post__body">
                         <?= substr($post['body'], 0, 150)  ?>...
